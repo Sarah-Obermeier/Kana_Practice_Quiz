@@ -14,7 +14,7 @@
             <div class="topnav" style="margin-left:130px">
                 <a href=".\landing.html">Home</a>
                 <a href=".\login.html">Login</a>
-                <a href="#contact">Contact</a>
+                <a class=active href=".\quiz.html">Quiz</a>
                 <a href="#about">About</a>
                 
             </div>
@@ -32,9 +32,9 @@
                 <div style="font-size:100px" id="kana">かな</div>
                 <table>
                     <tr>
-                        <th>Total: </th> <th id="total">0</th>
-                        <th>Correct: </th> <th id="correct">0</th>
-                        <th>Wrong: </th> <th id="wrong">0</th>
+                        <th>Total: </th> <td id="total">0</td>
+                        <th>Correct: </th> <td id="correct">0</td>
+                        <th>Wrong: </th> <td id="wrong">0</td>
                     </tr>
                 </table>
                 <div class="previous">Previous: </div>
@@ -43,7 +43,7 @@
                 <input style="font-size:20px; padding:10px;"
                     type="button" id="start" name="startButton" value="Start" onclick=startQuiz()>
                 <input style="font-size:20px; padding:10px;"
-                       type="button" id="input" name="inputButton" value="Enter" onclick=checkAnswer()>
+                       type="button" disabled id="input" name="inputButton" value="Enter" onclick=checkAnswer()>
                 <input  style="font-size:20px; padding:10px;"
                     type="button" id="finish" name="finishButton" value="Finish">
             </div>

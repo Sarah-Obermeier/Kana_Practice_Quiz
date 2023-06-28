@@ -5,6 +5,7 @@ function startQuiz()
 {
     var kanaType = document.getElementById('kanaSelect').value;
     document.getElementById("kana").innerHTML = getNextKana();
+    document.getElementById("input").disabled = false;
 }
 
 function checkAnswer()
