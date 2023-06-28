@@ -1,0 +1,33 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kana Landing</title>
+    <link rel="stylesheet" th:href="@{/css/landing.css}">
+    <!--<link type="text/css" href="css/landing.css" rel="stylesheet" /> -->
+</head>
+<body>
+    <div class="app-wrap">
+        <header>
+            <!--input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..."/-->
+            <div class="topnav">
+                <a class="active" href="#home">Home</a>
+                <a href=".\login.html">Login</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+              </div>
+        </header>
+        <main>
+
+            <div class="current">
+                <div class="banner">Kana Practice</div>
+                <a class="banner2" href=".\quiz.html">Start a quiz</a>
+                <div class="buffer">or</div>
+                <a class="login" href=".\login.html">login and track your results</a>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

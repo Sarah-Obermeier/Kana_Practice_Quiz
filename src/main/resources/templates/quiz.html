@@ -1,0 +1,53 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<script src="js/javascript.js"></script>
+<!--script type="text/javascript" src="..\scripts\javascript.js"></script>-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <link rel="stylesheet" th:href="@{/css/landing.css}">
+</head>
+<body>
+    <div class="app-wrap">
+        <header>
+            <div class="topnav" style="margin-left:130px">
+                <a href=".\landing.html">Home</a>
+                <a href=".\login.html">Login</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+                
+            </div>
+            <select name="kana" id="kanaSelect" style="margin-left:40px">
+                <option value="hiragana">Hiragana</option>
+                <option value="katakana">Katakana</option>
+                <option value="kana">Both</option>
+            </select>
+        </header>
+        <main>
+
+            <div class="current">
+                <!--<img th:src="@{/images/Hiragana A.png}" width="100px" height="100px" id="kanaImage">-->
+                <!--<div id="kana" value="test" width="100px" height="100px"</div>-->
+                <div style="font-size:100px" id="kana">かな</div>
+                <table>
+                    <tr>
+                        <th>Total: </th> <th id="total">0</th>
+                        <th>Correct: </th> <th id="correct">0</th>
+                        <th>Wrong: </th> <th id="wrong">0</th>
+                    </tr>
+                </table>
+                <div class="previous">Previous: </div>
+                <div class="prev_answer" id="previous">n/a</div>
+                <input type="text" id="answer" name="answer"><br><br>
+                <input style="font-size:20px; padding:10px;"
+                    type="button" id="start" name="startButton" value="Start" onclick=startQuiz()>
+                <input style="font-size:20px; padding:10px;"
+                       type="button" id="input" name="inputButton" value="Enter" onclick=checkAnswer()>
+                <input  style="font-size:20px; padding:10px;"
+                    type="button" id="finish" name="finishButton" value="Finish">
+            </div>
+        </main>
+    </div>
+</body>
+</html>
