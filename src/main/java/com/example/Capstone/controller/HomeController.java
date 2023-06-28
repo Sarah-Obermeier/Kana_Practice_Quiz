@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-    @GetMapping("/landing.html")
-    public String test(Model model){
+    @GetMapping("/")
+    public String landing(Model model){
         return "landing";
     }
+    @GetMapping("/landing.html")
+    public String landing2(Model model) {return "landing";}
 }
