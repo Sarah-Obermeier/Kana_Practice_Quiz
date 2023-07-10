@@ -13,7 +13,13 @@ function startQuiz()
 //ends the quiz
 function endQuiz()
 {
-    document.getElementById("kana").innerHTML = "かな";
+    var total = document.getElementById("total").innerHTML;
+    var correct = document.getElementById("correct").innerHTML;
+    var wrong = document.getElementById("wrong").innerHTML;
+    var kana = document.getElementById("kana").innerHTML;
+    var percent = parseFloat(correct/total * 100).toFixed(2);
+    if (correct == 0) {document.getElementById("kana").innerHTML = "You got 0% correct"}
+    else {document.getElementById("kana").innerHTML = "You got " + percent + "% correct"}
     document.getElementById("input").disabled = true;
     document.getElementById("start").disabled = false;
 }
