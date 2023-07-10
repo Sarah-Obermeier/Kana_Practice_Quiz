@@ -15,8 +15,7 @@
         <property name="hibernate.format_sql" >true </property>
 
         <!--     Mapping entity file -->
-        <mapping class="com.perscholas.model.Person"/>
-        <mapping class="com.perscholas.model.Address"/>
+        <mapping class="com.example.Capstone.model.User"/>
 
     </session-factory>
 </hibernate-configuration>
