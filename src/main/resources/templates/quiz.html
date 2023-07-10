@@ -32,9 +32,9 @@
                 <div style="font-size:100px" id="kana">かな</div>
                 <table>
                     <tr>
-                        <th>Total: </th> <td id="total">0</td>
-                        <th>Correct: </th> <td id="correct">0</td>
-                        <th>Wrong: </th> <td id="wrong">0</td>
+                        <th>Total: </th> <td id="total" th:text="${showTotal}"></td>
+                        <th>Correct: </th> <td id="correct" th:text="${showCorrect}"></td>
+                        <th>Wrong: </th> <td id="wrong" th:text="${showWrong}"></td>
                     </tr>
                 </table>
                 <div class="previous">Previous: </div>
@@ -45,7 +45,7 @@
                 <input style="font-size:20px; padding:10px;"
                        type="button" disabled id="input" name="inputButton" value="Enter" onclick=checkAnswer()>
                 <input  style="font-size:20px; padding:10px;"
-                    type="button" id="finish" name="finishButton" value="Finish">
+                    type="button" id="finish" name="finishButton" value="Finish" onclick=endQuiz()>
             </div>
         </main>
     </div>

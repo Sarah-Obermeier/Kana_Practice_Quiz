@@ -1,13 +1,24 @@
 
 document.getElementById('start').onclick = startQuiz();
 
+//Starts the quiz
 function startQuiz()
 {
     var kanaType = document.getElementById('kanaSelect').value;
     document.getElementById("kana").innerHTML = getNextKana();
     document.getElementById("input").disabled = false;
+    document.getElementById("start").disabled = true;
 }
 
+//ends the quiz
+function endQuiz()
+{
+    document.getElementById("kana").innerHTML = "かな";
+    document.getElementById("input").disabled = true;
+    document.getElementById("start").disabled = false;
+}
+
+//
 function checkAnswer()
 {
     var answer = getAnswer();
@@ -295,3 +306,4 @@ function getAnswer()
     }
     return answer;
 }
+

@@ -6,7 +6,7 @@
 
 body {
     font-family: 'montserrat', sans-serif;
-    background-image: url('../images/cherry blossoms.jpg'); /*image taken from pixbay*/
+    background-image: url('../../images/cherry blossoms.jpg'); /*image taken from pixbay*/
     background-size: cover;
     background-position: top center;
 }
