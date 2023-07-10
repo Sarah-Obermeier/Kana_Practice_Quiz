@@ -10,7 +10,7 @@ function startQuiz()
     document.getElementById("start").disabled = true;
 }
 
-//ends the quiz
+//ends the quiz and displays percentage correct
 function endQuiz()
 {
     var total = document.getElementById("total").innerHTML;
@@ -24,7 +24,7 @@ function endQuiz()
     document.getElementById("start").disabled = false;
 }
 
-//
+//checks the answer and updates the total, correct, and wrong variables
 function checkAnswer()
 {
     var answer = getAnswer();
@@ -55,6 +55,7 @@ function checkAnswer()
     }
 }
 
+//randomly selects the next kana to display
 function getNextKana()
 {
     var kanaType = document.getElementById('kanaSelect').value;
@@ -140,6 +141,7 @@ function getNextKana()
     return hiragana[rand];
 }
 
+//gets the romaji of the displayed kana
 function getAnswer()
 {
     var kana = document.getElementById("kana").innerHTML;
