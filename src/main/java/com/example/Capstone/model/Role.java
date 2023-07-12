@@ -1,33 +1,21 @@
 package com.example.Capstone.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import jakarta.persistence.*;
+import lombok.*;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-
-@Entity
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
-@ToString
+@AllArgsConstructor
+@Data
+@Entity
 @Table(name = "roles")
-public class Role {
+public class Role{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    @Column (nullable=false, unique=true)
-    String email;
-    @ManyToMany(mappedBy = "roles")
-    List<User> users = new ArrayList<>();
+    @GeneratedValue( strategy= GenerationType.IDENTITY )
+    private Long id;
+    @Column(name = "name", nullable = false, unique = true)
+    private String name;
 
-    public Role(Long id, String email, List<User> users)
-    {
-        this.id = id;
-        this.email = email;
-        this.users = users;
-    }
 }
+
