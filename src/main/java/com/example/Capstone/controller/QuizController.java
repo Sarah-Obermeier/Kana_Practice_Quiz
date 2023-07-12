@@ -16,10 +16,4 @@ public class QuizController {
         return "quiz";
 
     }
-
-    /*@ResponseBody
-    public String test(@RequestParam(test = "test") String test))
-    {
-        return "test";
-    }*/
 }
